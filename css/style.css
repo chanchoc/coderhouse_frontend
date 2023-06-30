@@ -1,0 +1,445 @@
+/*-----------------------------------------------------------------------
+- Fonts
+-----------------------------------------------------------------------*/
+
+@font-face {
+    font-display: swap;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/poppins.woff2") format("woff2");
+}
+
+/*-----------------------------------------------------------------------
+- General
+-----------------------------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    overflow-x: hidden;
+    background-color: #f2f2f3;
+}
+
+html {
+    scroll-padding-top: 85px;
+}
+
+main {
+    grid-area: main;
+    max-width: 1250px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.background {
+    background-color: #e9e7e9;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.flex-row {
+    flex-flow: row wrap;
+}
+
+.flex-col {
+    flex-flow: column wrap;
+}
+
+.row-evenly {
+    justify-content: space-evenly;
+}
+
+.row-start {
+    justify-content: flex-start;
+}
+
+.col-evenly {
+    align-items: space-evenly;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+.margin {
+    margin: 10px;
+}
+
+.border {
+    border: 1px solid black;
+}
+
+.title {
+    text-align: center;
+    padding: 60px 0px 30px 0px;
+}
+
+/*-----------------------------------------------------------------------
+- Navbar y Footer
+-----------------------------------------------------------------------*/
+
+header {
+    grid-area: header;
+    background-color: #7f8c8d;
+    position: fixed;
+    width: 100%;
+    height: 85px;
+    top: 0;
+    z-index: 999;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #7f8c8d;
+    padding: 15px 0px 15px 0px;
+}
+
+.navbar,
+.foot {
+    background-color: #7f8c8d;
+    height: 85px;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+
+.foot {
+    height: auto;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar a,
+.navbar input {
+    margin: 10px;
+    vertical-align: middle;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar a:hover {
+    color: black;
+    font-weight: 900;
+}
+
+.after-nav {
+    margin-top: 85px;
+}
+
+.carrito:hover {
+    content: url(../multimedia/img/cart-hover.png);
+}
+
+.notificaciones:hover {
+    content: url(../multimedia/img/bell-hover.png);
+}
+
+.search {
+    border-radius: 5px;
+    height: 30px;
+}
+
+/*-----------------------------------------------------------------------
+- Index Layout
+-----------------------------------------------------------------------*/
+
+.GridContainer {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto auto auto;
+}
+
+.homeMainSubgrid {
+    display: grid;
+    grid-template-areas:
+        "banner"
+        "featured-products"
+        "us"
+        "clients"
+        "contact";
+    grid-template-rows: auto auto auto auto;
+}
+
+.productMainSubgrid {
+    display: grid;
+    grid-template-areas: "productImages productDescription";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+}
+
+/*-----------------------------------------------------------------------
+- Home Banner
+-----------------------------------------------------------------------*/
+
+.banner {
+    grid-area: banner;
+    width: 100%;
+    object-fit: cover;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/*-----------------------------------------------------------------------
+- Featured Products
+-----------------------------------------------------------------------*/
+
+.featured-products {
+    grid-area: featured-products;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/*-----------------------------------------------------------------------
+- Product Card
+-----------------------------------------------------------------------*/
+
+.product {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: #c2c0c4;
+}
+
+.product img {
+    width: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 5px 5px 0px 5px;
+}
+
+.product h4,
+.product h5 {
+    padding: 10px 0px 0px 0px;
+}
+
+.product:hover {
+    filter: brightness(0.75);
+    box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 0.16);
+}
+
+.product a {
+    color: black;
+}
+
+/*-----------------------------------------------------------------------
+- Product Page
+-----------------------------------------------------------------------*/
+
+.product-img {
+    grid-area: productImages;
+    margin-top: 30px;
+    justify-content: flex-start;
+}
+
+.product-img > img {
+    max-width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 2000px;
+}
+
+.product-small-img {
+    max-width: 33%;
+    border-radius: 10px;
+    margin-top: 20px;
+    object-fit: cover;
+    padding: 5px;
+}
+
+.product-desc {
+    grid-area: productDescription;
+    margin-top: 30px;
+    justify-content: flex-start;
+    align-items: start;
+    padding: 10px;
+}
+
+.product-desc .titles {
+    width: 100%;
+    text-align: center;
+}
+
+.product-desc p {
+    margin: 10px 0px;
+}
+
+.product-desc input,
+.product-desc button {
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+}
+
+/*-----------------------------------------------------------------------
+- Nosotros
+-----------------------------------------------------------------------*/
+
+#us {
+    grid-area: us;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#us img {
+    width: 500px;
+    object-fit: cover;
+}
+
+#us p {
+    width: 75%;
+}
+
+.us-left {
+    width: 50%;
+    align-content: center;
+}
+
+/*-----------------------------------------------------------------------
+- Clientes
+-----------------------------------------------------------------------*/
+
+#clients {
+    grid-area: clients;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#clients img {
+    width: 15%;
+    object-fit: cover;
+    padding: 0px 5px 0px 5px;
+}
+
+/*-----------------------------------------------------------------------
+- Contacto
+-----------------------------------------------------------------------*/
+
+#contact {
+    grid-area: contact;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#contact iframe {
+    border-radius: 10px;
+    box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 0.16);
+    margin-right: 10px;
+}
+
+#contact p {
+    text-align: center;
+}
+
+.contact-form {
+    width: 50%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin: 10px 0 10px 0px;
+    padding: 5px;
+    width: 95%;
+    border-radius: 5px;
+}
+
+.contact-form input {
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form form {
+    padding: 10px;
+}
+
+/*-----------------------------------------------------------------------
+- Log In
+-----------------------------------------------------------------------*/
+
+.login label {
+    text-align: left;
+    width: 50%;
+    margin-top: 15px;
+}
+
+.login button,
+.login input {
+    margin: 10px;
+    height: 40px;
+    padding: 10px 30px;
+    width: 50%;
+}
+
+.log-access {
+    width: 50%;
+}
+
+.log-access button {
+    width: 40%;
+    height: auto;
+    margin-top: 15px;
+}
+
+.log-email {
+    padding-top: 30px;
+    border-top: 1px solid black;
+}
+
+/*-----------------------------------------------------------------------
+- Cart
+-----------------------------------------------------------------------*/
+
+.cart-products,
+.cart-total {
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.cart-img {
+    height: 200px;
+    border-radius: 10px;
+}
+
+.cart-products input {
+    width: 30%;
+    text-align: center;
+    height: 40px;
+    font-size: 1.2rem;
+}
+
+.cart-total {
+    padding-top: 30px;
+    border-top: 2px solid black;
+}

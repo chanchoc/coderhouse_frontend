@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="shortcut icon" href="../multimedia/img/favicon.png" />
+        <title>Rowa Bags - Log In</title>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header>
+            <nav class="navbar flex-container flex-row">
+                <a href="../index.html"><img id="logo" src="../multimedia/img/logo.png" alt="Rowa Bags" /></a>
+                <ul>
+                    <li><a href="./mochilas.html">MOCHILAS</a></li>
+                    <li><a href="../index.html#us">SOBRE ROWA</a></li>
+                    <li><a href="../index.html#contact">CONTACTO</a></li>
+                    <li><a href="./login.html">LOG IN</a></li>
+                    <li>
+                        <a href=""><img src="../multimedia/img/bell.png" alt="notificaciones" class="notificaciones" /></a>
+                    </li>
+                    <li>
+                        <a href="./cart.html"><img src="../multimedia/img/cart.png" alt="carrito" class="carrito" /></a>
+                    </li>
+                    <li><input type="text" placeholder="Search" class="search" /></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- MAIN -->
+        <main>
+            <h1 class="title after-nav">Log In</h1>
+            <div class="flex-container flex-col login">
+                <button>Registrarse con Gmail</button>
+                <button>Registrarse con Facebook</button>
+                <label for="log-email" class="log-email">Email</label>
+                <input type="text" name="log-email" placeholder="example@gmail.com" id="log-email" required />
+                <label for="log-password">Contraseña</label>
+                <input type="text" name="log-password" placeholder="Escribe tu contraseña" id="log-password" required />
+                <div class="flex-container flex-row row-evenly log-access">
+                    <button>Iniciar Sesión</button>
+                    <button>Crear Cuenta</button>
+                </div>
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <footer>
+            <div class="foot flex-container flex-row row-evenly">
+                <img src="../multimedia/img/logo.png" alt="Rowa Bags" />
+                <div class="newsletter">
+                    <form class="newsletter-form">
+                        <label for="newsletter">No te pierdas nuestras ofertas y novedades:</label>
+                        <input type="text" name="newsletter" placeholder="Email" />
+                        <input type="submit" value="Enviar" />
+                    </form>
+                </div>
+                <div class="contact-links">
+                    <div class="flex-container flex-row row-start">
+                        <img src="../multimedia/img/whatsapp.png" alt="whatsapp" />
+                        <p class="margin">+549 011-2386-5135</p>
+                    </div>
+                    <div class="flex-container flex-row row-start">
+                        <img src="../multimedia/img/email.png" alt="email" />
+                        <p class="margin">hola@rowabags.com.ar</p>
+                    </div>
+                    <div class="flex-container flex-row row-start">
+                        <img src="../multimedia/img/ubicacion.png" alt="location" />
+                        <p class="margin">Ayacucho 1480, CABA, Argentina</p>
+                    </div>
+                </div>
+                <div class="social">
+                    <a href=""><img src="../multimedia/img/facebook.png" alt="facebook" class="margin" /></a>
+                    <a href=""><img src="../multimedia/img/instagram.png" alt="instagram" class="margin" /></a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
