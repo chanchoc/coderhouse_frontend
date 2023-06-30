@@ -1,2 +1,1 @@
-# coderhouse_frontend
-Curso de Coderhouse de Desarrollo Web
+# Curso de Coderhouse de Desarrollo Web
