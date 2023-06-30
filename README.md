@@ -1,6 +1,6 @@
 # Curso de Coderhouse de Desarrollo Web
 
-Deplyed with GitHub Pages:<br>
+Deployed with GitHub Pages:<br>
 https://chanchoc.github.io/coderhouse_frontend/
 
 Moqup:<br>
