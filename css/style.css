@@ -130,7 +130,7 @@ footer {
 }
 
 .foot input {
-    border-radius: 3px;
+    border-radius: 5px;
     height: 30px;
 }
 
@@ -447,4 +447,17 @@ footer {
 .cart-total {
     padding-top: 30px;
     border-top: 2px solid black;
+}
+
+/*-----------------------------------------------------------------------
+- Mochilas
+-----------------------------------------------------------------------*/
+
+.product-order {
+    justify-content: right;
+}
+
+.product-order select {
+    border-radius: 5px;
+    height: 30px;
 }
