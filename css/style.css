@@ -493,17 +493,26 @@ footer {
     margin-top: 15px;
 }
 
-@media (max-width: 768px) {
-    .log-access button {
-        width: 100%;
-    }
-}
-
 .log-email {
     padding-top: 30px;
     border-top: 1px solid black;
 }
 
+@media (max-width: 768px) {
+    .login button,
+    .login input,
+    .login label {
+        width: 80%;
+    }
+
+    .log-access {
+        width: 80%;
+    }
+
+    .log-access button {
+        width: 80%;
+    }
+}
 /*-----------------------------------------------------------------------
 - Cart
 -----------------------------------------------------------------------*/
