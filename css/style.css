@@ -251,7 +251,7 @@ footer {
     }
 
     .search {
-        width: 150px;
+        width: 90%;
     }
 }
 
@@ -543,4 +543,5 @@ footer {
     border-radius: 5px;
     height: 30px;
     border: 1px solid #7f8c8d;
+    margin-right: 10px;
 }
