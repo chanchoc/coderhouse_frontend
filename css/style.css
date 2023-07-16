@@ -282,6 +282,7 @@ footer {
     background-color: #c2c0c4;
     transition: 0.5s;
     color: black;
+    position: relative;
 }
 
 .product img {
@@ -297,9 +298,26 @@ footer {
     padding: 10px 0px 0px 0px;
 }
 
+.product .add-cart {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    background-color: white;
+    visibility: hidden;
+    transition: 0.1s;
+}
+
 .product:hover {
     filter: brightness(0.75);
     box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 0.16);
+}
+
+.product:hover > .add-cart {
+    visibility: visible;
 }
 
 /*-----------------------------------------------------------------------
