@@ -244,6 +244,7 @@ footer {
         gap: 20px;
         padding-top: 30px;
         border-left: 1px solid white;
+        transition: 0.5s;
     }
 
     .navbar ul:hover {
