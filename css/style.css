@@ -407,6 +407,7 @@ footer {
 #clients img {
     width: 15%;
     min-width: 200px;
+    height: 90px;
     object-fit: cover;
     padding: 0px 5px 0px 5px;
 }
