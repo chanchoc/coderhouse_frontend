@@ -33,8 +33,7 @@ html {
 }
 
 main {
-    grid-area: main;
-    max-width: 1250px;
+    max-width: 1400px;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
@@ -97,11 +96,21 @@ h2 {
 }
 
 /*-----------------------------------------------------------------------
+- Index Layout
+-----------------------------------------------------------------------*/
+
+.productMainSubgrid {
+    display: grid;
+    grid-template-areas: "productImages productDescription";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+}
+
+/*-----------------------------------------------------------------------
 - Navbar y Footer
 -----------------------------------------------------------------------*/
 
 header {
-    grid-area: header;
     background-color: #7f8c8d;
     position: fixed;
     width: 100%;
@@ -111,7 +120,6 @@ header {
 }
 
 footer {
-    grid-area: footer;
     background-color: #7f8c8d;
     padding: 15px 0px 15px 0px;
 }
@@ -120,9 +128,17 @@ footer {
 .foot {
     background-color: #7f8c8d;
     height: 85px;
-    max-width: 1250px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0px 10px;
+    text-align: center;
+}
+
+.navbar .logo,
+.foot .logo {
+    height: 60px;
+    width: 150px;
+    object-fit: cover;
 }
 
 .foot {
@@ -132,10 +148,32 @@ footer {
 .foot input {
     border-radius: 5px;
     height: 30px;
+    border: 1px solid #7f8c8d;
+    padding: 0px 10px;
+}
+
+.foot .social-img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+
+.navbar .menu-hamburguesa {
+    display: none;
+    height: 45px;
+    width: 45px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .navbar ul li {
-    display: inline;
+    text-decoration: none;
+    display: block;
 }
 
 .navbar a,
@@ -157,6 +195,13 @@ footer {
     margin-top: 85px;
 }
 
+.navbar .notificaciones,
+.navbar .carrito {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+
 .carrito:hover {
     content: url(../multimedia/img/cart-hover.png);
 }
@@ -168,37 +213,42 @@ footer {
 .search {
     border-radius: 5px;
     height: 30px;
+    border: 1px solid #7f8c8d;
+    text-align: center;
 }
 
-/*-----------------------------------------------------------------------
-- Index Layout
------------------------------------------------------------------------*/
-
-.GridContainer {
-    display: grid;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
-    grid-template-rows: auto auto auto;
+@media (min-width: 768px) and (max-width: 992px) {
+    .search {
+        display: none;
+    }
 }
 
-.homeMainSubgrid {
-    display: grid;
-    grid-template-areas:
-        "banner"
-        "featured-products"
-        "us"
-        "clients"
-        "contact";
-    grid-template-rows: auto auto auto auto;
-}
+@media (max-width: 768px) {
+    .navbar .menu-hamburguesa {
+        display: block;
+    }
 
-.productMainSubgrid {
-    display: grid;
-    grid-template-areas: "productImages productDescription";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto;
+    .navbar .menu-hamburguesa:hover + ul {
+        right: 0px;
+    }
+
+    .navbar ul {
+        position: fixed;
+        flex-direction: column;
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        background-color: #7f8c8d;
+        margin: 0px;
+        right: -300px;
+        gap: 20px;
+        padding-top: 30px;
+        border-left: 1px solid white;
+    }
+
+    .navbar ul:hover {
+        right: 0px;
+    }
 }
 
 /*-----------------------------------------------------------------------
@@ -206,8 +256,8 @@ footer {
 -----------------------------------------------------------------------*/
 
 .banner {
-    grid-area: banner;
     width: 100%;
+    min-height: 300px;
     object-fit: cover;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -218,9 +268,9 @@ footer {
 -----------------------------------------------------------------------*/
 
 .featured-products {
-    grid-area: featured-products;
-    margin: 10px;
+    margin: 15px 0px;
     border-radius: 10px;
+    padding-bottom: 5px;
 }
 
 /*-----------------------------------------------------------------------
@@ -228,16 +278,21 @@ footer {
 -----------------------------------------------------------------------*/
 
 .product {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     padding: 10px;
     margin: 10px;
-    text-align: center;
     font-size: 1.2rem;
     border-radius: 10px;
     background-color: #c2c0c4;
+    transition: 0.5s;
+    color: black;
 }
 
 .product img {
     width: 250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 10px;
     margin: 5px 5px 0px 5px;
@@ -253,10 +308,6 @@ footer {
     box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 0.16);
 }
 
-.product a {
-    color: black;
-}
-
 /*-----------------------------------------------------------------------
 - Product Page
 -----------------------------------------------------------------------*/
@@ -269,6 +320,7 @@ footer {
 
 .product-img > img {
     max-width: 100%;
+    min-width: 250px;
     border-radius: 10px;
     object-fit: cover;
     max-height: 2000px;
@@ -276,6 +328,7 @@ footer {
 
 .product-small-img {
     max-width: 33%;
+    min-width: 70px;
     border-radius: 10px;
     margin-top: 20px;
     object-fit: cover;
@@ -311,19 +364,21 @@ footer {
 -----------------------------------------------------------------------*/
 
 #us {
-    grid-area: us;
     text-align: center;
-    margin: 10px;
+    margin: 15px 0px;
     border-radius: 10px;
+    padding-bottom: 5px;
 }
 
 #us img {
-    width: 500px;
+    max-width: 500px;
+    min-width: 290px;
+    width: 50%;
     object-fit: cover;
 }
 
 #us p {
-    width: 75%;
+    width: 85%;
 }
 
 .us-left {
@@ -331,18 +386,23 @@ footer {
     align-content: center;
 }
 
+#us .us-left img {
+    width: 100%;
+}
+
 /*-----------------------------------------------------------------------
 - Clientes
 -----------------------------------------------------------------------*/
 
 #clients {
-    grid-area: clients;
-    margin: 10px;
+    margin: 15px 0px;
     border-radius: 10px;
+    padding-bottom: 5px;
 }
 
 #clients img {
     width: 15%;
+    min-width: 200px;
     object-fit: cover;
     padding: 0px 5px 0px 5px;
 }
@@ -352,9 +412,9 @@ footer {
 -----------------------------------------------------------------------*/
 
 #contact {
-    grid-area: contact;
-    margin: 10px;
+    margin: 15px 0px;
     border-radius: 10px;
+    padding-bottom: 5px;
 }
 
 #contact iframe {
@@ -367,7 +427,14 @@ footer {
     text-align: center;
 }
 
+#contact iframe {
+    width: 45%;
+    min-width: 290px;
+    height: 450px;
+}
+
 .contact-form {
+    min-width: 290px;
     width: 50%;
 }
 
@@ -377,6 +444,7 @@ footer {
     padding: 5px;
     width: 95%;
     border-radius: 5px;
+    border: 1px solid #7f8c8d;
 }
 
 .contact-form input {
@@ -387,6 +455,11 @@ footer {
 
 .contact-form form {
     padding: 10px;
+}
+
+.contact-img {
+    height: 30px;
+    width: 30px;
 }
 
 /*-----------------------------------------------------------------------
@@ -402,7 +475,7 @@ footer {
 .login button,
 .login input {
     margin: 10px;
-    height: 40px;
+    min-height: 40px;
     padding: 10px 30px;
     width: 50%;
 }
@@ -412,9 +485,14 @@ footer {
 }
 
 .log-access button {
-    width: 40%;
-    height: auto;
+    width: 43%;
     margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .log-access button {
+        width: 100%;
+    }
 }
 
 .log-email {
@@ -460,4 +538,5 @@ footer {
 .product-order select {
     border-radius: 5px;
     height: 30px;
+    border: 1px solid #7f8c8d;
 }
