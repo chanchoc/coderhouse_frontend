@@ -357,7 +357,7 @@ footer {
 .product-desc button {
     width: 100%;
     text-align: center;
-    margin: 10px;
+    margin: 10px 0px;
 }
 
 @media (max-width: 768px) {
