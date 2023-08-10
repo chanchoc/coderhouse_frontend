@@ -1,0 +1,42 @@
+/*-----------------------------------------------------------------------
+- Footer
+-----------------------------------------------------------------------*/
+
+footer {
+    background-color: $bg-header-footer-color;
+    padding: 15px 0px 15px 0px;
+    .foot {
+        @extend .flex-container;
+        @extend .flex-row;
+        @extend .row-evenly;
+        max-width: $max-width;
+        height: auto;
+        margin: 0 auto;
+        padding: 0px 10px;
+        text-align: center;
+        .logo {
+            height: 60px;
+            width: 150px;
+            object-fit: cover;
+        }
+        input {
+            border-radius: 5px;
+            height: 30px;
+            border: 1px solid $bg-header-footer-color;
+            padding: 0px 10px;
+        }
+        .social img {
+            height: 30px;
+            width: 30px;
+            object-fit: cover;
+        }
+        .newsletter-form label {
+            display: block;
+        }
+        .contact-links div {
+            @extend .flex-container;
+            @extend .flex-row;
+            @extend .row-start;
+        }
+    }
+}

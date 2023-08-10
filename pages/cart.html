@@ -3,20 +3,21 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Prepara tu próxima escapada con facilidad. Explora tu carrito de compras, donde tus selecciones de mochilas perfectas te esperan." />
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
         <link rel="shortcut icon" href="../multimedia/img/favicon.png" />
         <title>Rowa Bags - Carrito</title>
     </head>
     <body>
         <!-- HEADER -->
         <header>
-            <nav class="navbar flex-container flex-row">
+            <nav class="navbar">
                 <a href="../index.html"><img class="logo" src="../multimedia/img/logo.png" alt="Rowa Bags" loading="lazy" /></a>
                 <img src="../multimedia/img/menu.png" alt="menu hamburguesa" class="menu-hamburguesa" loading="lazy" />
                 <ul>
@@ -40,7 +41,7 @@
         <!-- MAIN -->
         <main>
             <h1 class="title after-nav">Carrito de Compras</h1>
-            <div class="flex-container flex-col col-evenly cart">
+            <div class="cart">
                 <div class="cartGrid">
                     <div class="cart-img">
                         <img src="../multimedia/img/products/areco1.webp" alt="mochila areco" loading="lazy" />
@@ -48,7 +49,7 @@
                     <div class="cart-desc">
                         <p><b>Mochila Areco</b><br />$26.990</p>
                     </div>
-                    <div class="flex-container flex-row row-evenly cart-options">
+                    <div class="cart-options">
                         <input type="number" name="products" min="1" max="100" placeholder="1" />
                         <img src="../multimedia/img/trash.png" alt="eliminar" loading="lazy" />
                     </div>
@@ -60,12 +61,12 @@
                     <div class="cart-desc">
                         <p><b>Mochila Boedo</b><br />$25.990</p>
                     </div>
-                    <div class="flex-container flex-row row-evenly cart-options">
+                    <div class="cart-options">
                         <input type="number" name="products" min="1" max="100" placeholder="1" />
                         <img src="../multimedia/img/trash.png" alt="eliminar" loading="lazy" />
                     </div>
                 </div>
-                <div class="flex-container flex-row row-evenly cart-total">
+                <div class="cart-total">
                     <p><b>Total:</b></p>
                     <p>$52.980</p>
                 </div>
@@ -73,7 +74,7 @@
         </main>
         <!-- FOOTER -->
         <footer>
-            <div class="foot flex-container flex-row row-evenly">
+            <div class="foot">
                 <img src="../multimedia/img/logo.png" alt="Rowa Bags" class="logo" loading="lazy" />
                 <div class="newsletter">
                     <form class="newsletter-form">
@@ -83,22 +84,22 @@
                     </form>
                 </div>
                 <div class="contact-links">
-                    <div class="flex-container flex-row row-start">
+                    <div>
                         <img src="../multimedia/img/whatsapp.png" alt="whatsapp" class="contact-img" loading="lazy" />
                         <p class="margin">+549 011-2386-5135</p>
                     </div>
-                    <div class="flex-container flex-row row-start">
+                    <div>
                         <img src="../multimedia/img/email.png" alt="email" class="contact-img" loading="lazy" />
                         <p class="margin">hola@rowabags.com.ar</p>
                     </div>
-                    <div class="flex-container flex-row row-start">
+                    <div>
                         <img src="../multimedia/img/ubicacion.png" alt="location" class="contact-img" loading="lazy" />
                         <p class="margin">Ayacucho 1480, CABA</p>
                     </div>
                 </div>
                 <div class="social">
-                    <a href=""><img src="../multimedia/img/facebook.png" alt="facebook" class="margin social-img" loading="lazy" /></a>
-                    <a href=""><img src="../multimedia/img/instagram.png" alt="instagram" class="margin social-img" loading="lazy" /></a>
+                    <a href=""><img src="../multimedia/img/facebook.png" alt="facebook" class="margin" loading="lazy" /></a>
+                    <a href=""><img src="../multimedia/img/instagram.png" alt="instagram" class="margin" loading="lazy" /></a>
                 </div>
             </div>
         </footer>

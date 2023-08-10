@@ -1,0 +1,48 @@
+/*-----------------------------------------------------------------------
+- Product Card
+-----------------------------------------------------------------------*/
+
+.product {
+    @extend .flex-container;
+    @extend .flex-col;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: $bg-product;
+    transition: 0.5s;
+    color: black;
+    position: relative;
+    &:hover {
+        filter: brightness(0.75);
+        box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 0.16);
+        transform: translate(0px, -0.3rem);
+    }
+    img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 5px 5px 0px 5px;
+    }
+    h4,
+    h5 {
+        padding: 10px 0px 0px 0px;
+    }
+    .add-cart {
+        height: 50px;
+        width: 50px;
+        object-fit: cover;
+        border-radius: 5px;
+        position: absolute;
+        top: 60%;
+        left: 40%;
+        background-color: white;
+        visibility: hidden;
+        transition: 0.1s;
+    }
+    &:hover > .add-cart {
+        visibility: visible;
+    }
+}

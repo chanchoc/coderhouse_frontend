@@ -1,0 +1,138 @@
+/*-----------------------------------------------------------------------
+- Home Banner
+-----------------------------------------------------------------------*/
+
+.banner img {
+    height: 40vh;
+    width: 100%;
+    object-fit: cover;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/*-----------------------------------------------------------------------
+- Featured Products
+-----------------------------------------------------------------------*/
+
+.featured-products {
+    @extend .home-sections;
+    background-color: $bg-section-color;
+    .features-product-list {
+        @extend .flex-container;
+        @extend .flex-row;
+        @extend .row-evenly;
+    }
+}
+
+/*-----------------------------------------------------------------------
+- Nosotros
+-----------------------------------------------------------------------*/
+
+#us {
+    @extend .home-sections;
+    background-color: $bg-section-color;
+    text-align: center;
+    .us-content {
+        @extend .flex-container;
+        @extend .flex-row;
+        @extend .row-evenly;
+        img {
+            max-width: 500px;
+            min-width: 290px;
+            width: 50%;
+            object-fit: cover;
+        }
+        p {
+            width: 100%;
+        }
+        .us-content-left {
+            @extend .flex-container;
+            @extend .flex-col;
+            width: 50%;
+            align-content: center;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/*-----------------------------------------------------------------------
+- Clientes
+-----------------------------------------------------------------------*/
+
+#clients {
+    @extend .home-sections;
+    background-color: $bg-section-color;
+    .clients-content {
+        @extend .flex-container;
+        @extend .flex-row;
+        @extend .row-evenly;
+        img {
+            width: 15%;
+            min-width: 200px;
+            height: 90px;
+            object-fit: contain;
+            padding: 0px 5px 0px 5px;
+        }
+    }
+}
+
+/*-----------------------------------------------------------------------
+- Contacto
+-----------------------------------------------------------------------*/
+
+#contact {
+    @extend .home-sections;
+    background-color: $bg-section-color;
+    p {
+        text-align: center;
+    }
+    .contact-content {
+        @extend .flex-container;
+        @extend .flex-row;
+        @extend .row-evenly;
+        .contact-form {
+            @extend .flex-col;
+            min-width: 290px;
+            width: 50%;
+            input {
+                margin: 10px 0px 10px 0px;
+                padding: 5px 10px;
+                width: 95%;
+                border-radius: 5px;
+                border: 1px solid $bg-header-footer-color;
+                height: 35px;
+                justify-content: center;
+                align-items: center;
+            }
+            textarea {
+                margin: 10px 0px 10px 0px;
+                padding: 5px 10px;
+                width: 95%;
+                border-radius: 5px;
+                border: 1px solid $bg-header-footer-color;
+            }
+            form {
+                padding: 10px;
+            }
+        }
+        iframe {
+            border-radius: 10px;
+            box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 0.16);
+            margin-right: 10px;
+            width: 45%;
+            min-width: 290px;
+            height: 500px;
+        }
+    }
+    .contact-info {
+        @extend .flex-container;
+        @extend .flex-row;
+        @extend .row-evenly;
+        div {
+            @extend .flex-container;
+            @extend .flex-row;
+        }
+    }
+}

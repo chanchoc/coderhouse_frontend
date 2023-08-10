@@ -1,0 +1,88 @@
+/*-----------------------------------------------------------------------
+- Cart
+-----------------------------------------------------------------------*/
+
+.cart {
+    @extend .flex-container;
+    @extend .flex-col;
+    @extend .col-evenly;
+    .cartGrid {
+        display: grid;
+        grid-template-areas: "cartImg cartDesc cartOpt";
+        grid-template-columns: 1fr 1fr 3fr;
+        grid-template-rows: auto;
+        width: 100%;
+        margin-bottom: 20px;
+        @media (max-width: 768px) {
+            grid-template-areas:
+                "cartImg cartDesc"
+                "cartImg cartOpt";
+            grid-template-columns: 1fr 2fr;
+            width: 80%;
+        }
+        @media (max-width: 576px) {
+            grid-template-areas:
+                "cartImg"
+                "cartDesc"
+                "cartOpt";
+            grid-template-columns: auto;
+            width: 80%;
+        }
+        .cart-img {
+            grid-area: cartImg;
+            margin-left: 10px;
+            display: flex;
+            justify-content: center;
+            img {
+                height: 200px;
+                border-radius: 10px;
+                @media (max-width: 768px) {
+                    height: 150px;
+                }
+            }
+        }
+        .cart-desc {
+            grid-area: cartDesc;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 10px;
+            @media (max-width: 576px) {
+                margin-top: 10px;
+            }
+        }
+        .cart-options {
+            @extend .flex-container;
+            @extend .flex-row;
+            @extend .row-evenly;
+            grid-area: cartOpt;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 20px;
+            @media (max-width: 768px) {
+                justify-content: center;
+            }
+            @media (max-width: 576px) {
+                margin-top: 10px;
+            }
+            input {
+                width: 30%;
+                text-align: center;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .cart-total {
+        @extend .flex-container;
+        @extend .flex-row;
+        @extend .row-evenly;
+        width: 100%;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        padding-top: 30px;
+        border-top: 2px solid black;
+    }
+}

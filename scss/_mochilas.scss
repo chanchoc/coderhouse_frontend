@@ -1,0 +1,22 @@
+/*-----------------------------------------------------------------------
+- Mochilas
+-----------------------------------------------------------------------*/
+
+.product-order {
+    @extend .flex-container;
+    @extend .flex-row;
+    @extend .row-evenly;
+    justify-content: right;
+    select {
+        border-radius: 5px;
+        height: 30px;
+        border: 1px solid $bg-header-footer-color;
+        margin-right: 10px;
+    }
+}
+
+.product-grid {
+    @extend .flex-container;
+    @extend .flex-row;
+    @extend .row-evenly;
+}
