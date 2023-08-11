@@ -39,22 +39,22 @@ main {
   margin: 0 auto;
 }
 
-.flex-container, .cart .cart-total, .cart .cartGrid .cart-options, .cart, .productMainGrid .product-desc, .productMainGrid .product-img .product-small-imgs, .productMainGrid .product-img, .product-grid, .product-order, .login .log-access, .login, #contact .contact-info div, #contact .contact-info, #contact .contact-content, #clients .clients-content, #us .us-content .us-content-left, #us .us-content, .featured-products .features-product-list, .product, footer .foot .contact-links div, footer .foot, header .navbar {
+.flex-container, .page-not-found .general-404 .message-404, .page-not-found .general-404, .cart .cart-total, .cart .cartGrid .cart-options, .cart, .productMainGrid .product-desc, .productMainGrid .product-img .product-small-imgs, .productMainGrid .product-img, .product-grid, .product-order, .login .log-access, .login, #contact .contact-info div, #contact .contact-info, #contact .contact-content, #clients .clients-content, #us .us-content .us-content-left, #us .us-content, .featured-products .features-product-list, .product, footer .foot .contact-links div, footer .foot, header .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-.flex-row, .cart .cart-total, .cart .cartGrid .cart-options, .productMainGrid .product-img .product-small-imgs, .product-grid, .product-order, .login .log-access, #contact .contact-info div, #contact .contact-info, #contact .contact-content, #clients .clients-content, #us .us-content, .featured-products .features-product-list, footer .foot .contact-links div, footer .foot, header .navbar {
+.flex-row, .page-not-found .general-404 .message-404, .cart .cart-total, .cart .cartGrid .cart-options, .productMainGrid .product-img .product-small-imgs, .product-grid, .product-order, .login .log-access, #contact .contact-info div, #contact .contact-info, #contact .contact-content, #clients .clients-content, #us .us-content, .featured-products .features-product-list, footer .foot .contact-links div, footer .foot, header .navbar {
   flex-flow: row wrap;
 }
 
-.flex-col, .cart, .productMainGrid .product-desc, .productMainGrid .product-img, .login, #contact .contact-content .contact-form, #us .us-content .us-content-left, .product {
+.flex-col, .page-not-found .general-404, .cart, .productMainGrid .product-desc, .productMainGrid .product-img, .login, #contact .contact-content .contact-form, #us .us-content .us-content-left, .product {
   flex-flow: column wrap;
 }
 
-.row-evenly, .cart .cart-total, .cart .cartGrid .cart-options, .productMainGrid .product-img .product-small-imgs, .product-grid, .product-order, .login .log-access, #contact .contact-info, #contact .contact-content, #clients .clients-content, #us .us-content, .featured-products .features-product-list, footer .foot {
+.row-evenly, .page-not-found .general-404 .message-404, .cart .cart-total, .cart .cartGrid .cart-options, .productMainGrid .product-img .product-small-imgs, .product-grid, .product-order, .login .log-access, #contact .contact-info, #contact .contact-content, #clients .clients-content, #us .us-content, .featured-products .features-product-list, footer .foot {
   justify-content: space-evenly;
 }
 
@@ -62,7 +62,7 @@ main {
   justify-content: flex-start;
 }
 
-.col-evenly, .cart {
+.col-evenly, .page-not-found .general-404, .cart {
   align-items: space-evenly;
 }
 
@@ -624,6 +624,26 @@ footer .foot .newsletter-form label {
   margin-top: 20px;
   padding-top: 30px;
   border-top: 2px solid black;
+}
+
+/*-----------------------------------------------------------------------
+- 404
+-----------------------------------------------------------------------*/
+.page-not-found {
+  max-width: 100vw;
+  height: 100vh;
+  background-color: #7f8c8d;
+}
+.page-not-found .general-404 {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+}
+.page-not-found .general-404 .message-404 {
+  gap: 20px;
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
