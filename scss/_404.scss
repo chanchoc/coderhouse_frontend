@@ -15,6 +15,10 @@
         justify-content: center;
         gap: 2rem;
         text-align: center;
+        .title-error {
+            font-size: 4rem;
+            font-weight: 700;
+        }
         .message-404 {
             @extend .flex-container;
             @extend .flex-row;

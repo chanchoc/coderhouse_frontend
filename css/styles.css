@@ -641,6 +641,10 @@ footer .foot .newsletter-form label {
   gap: 2rem;
   text-align: center;
 }
+.page-not-found .general-404 .title-error {
+  font-size: 4rem;
+  font-weight: 700;
+}
 .page-not-found .general-404 .message-404 {
   gap: 20px;
   font-size: 2rem;
