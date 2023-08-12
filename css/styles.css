@@ -233,6 +233,9 @@ header .navbar .menu-hamburguesa {
     right: 0px;
   }
 }
+header .navbar h1 {
+  display: none;
+}
 
 /*-----------------------------------------------------------------------
 - Footer
