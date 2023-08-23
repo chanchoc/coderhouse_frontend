@@ -59,11 +59,18 @@
         p {
             margin: 10px 0px;
         }
-        input,
-        button {
+        .agregar-producto {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
             width: 100%;
-            text-align: center;
-            margin: 10px 0px;
+            margin-top: 10px;
+            input,
+            button {
+                width: 50%;
+                text-align: center;
+                margin: 10px 0px;
+            }
         }
     }
 }

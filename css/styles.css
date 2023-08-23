@@ -267,8 +267,14 @@ footer .foot .social img {
   width: 30px;
   object-fit: cover;
 }
+footer .foot .newsletter-form {
+  padding: 10px;
+}
 footer .foot .newsletter-form label {
   display: block;
+}
+footer .foot .contact-links {
+  padding: 10px;
 }
 /*-----------------------------------------------------------------------
 - Product Card
@@ -538,9 +544,16 @@ footer .foot .newsletter-form label {
 .productMainGrid .product-desc p {
   margin: 10px 0px;
 }
-.productMainGrid .product-desc input,
-.productMainGrid .product-desc button {
+.productMainGrid .product-desc .agregar-producto {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
   width: 100%;
+  margin-top: 10px;
+}
+.productMainGrid .product-desc .agregar-producto input,
+.productMainGrid .product-desc .agregar-producto button {
+  width: 50%;
   text-align: center;
   margin: 10px 0px;
 }

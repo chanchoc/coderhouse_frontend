@@ -30,13 +30,19 @@ footer {
             width: 30px;
             object-fit: cover;
         }
-        .newsletter-form label {
-            display: block;
+        .newsletter-form {
+            padding: 10px;
+            label {
+                display: block;
+            }
         }
-        .contact-links div {
-            @extend .flex-container;
-            @extend .flex-row;
-            @extend .row-start;
+        .contact-links {
+            padding: 10px;
+            div {
+                @extend .flex-container;
+                @extend .flex-row;
+                @extend .row-start;
+            }
         }
     }
 }
